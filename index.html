@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --text-color: #ffffffcc;
+      --accent-color: #a64aff;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text-color);
+    }
+
+    .avatar {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid var(--accent-color);
+    }
+
+    .card {
+      padding: 30px;
+      border-radius: 20px;
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .card-title {
+      color: var(--accent-color);
+    }
+    
+    .card-text {
+        color: var(--text-color); /* Makes remaining text var(--text-color) */
+    }
+
+    .card-text strong {
+        color: var(--accent-color);
+    }
+
+    .divider {
+        width: 250px;
+        height: 3px;
+        background: var(--text-color);
+        margin: 10px auto;
+    }
+
+
+    .card-text strong {
+      color: var(--accent-color);
+    }
+
+    .card-text li {
+      text-align: left;
+      margin-bottom: 5px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      border: 1px solid var(--text-color);
+      color: var(--text-color);
+      background: transparent;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .social-icons a:hover {
+      background: var(--accent-color);
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card text-center">
+      <div class="card-body">
+        <img src="images/portrait1.png" alt="Profile" class="avatar" />
+        <h3 class="card-title mb-0">Sreenivasulu Baddela</h3>
+        <h6 class="card-title mb-0">Cloud & DevOps Engineer</h6>
+        <div class="divider"></div>
+        <div class="card-text">
+          <p>
+            <strong>Highly skilled and experienced Cloud & DevOps Engineer</strong>
+            with a passion for building scalable, secure, and automated infrastructure solutions.
+          </p>
+          <ul class="list-unstyled">
+            <li><strong>Cloud:</strong> AWS, Azure</li>
+            <li><strong>CI/CD Tools:</strong> Azure DevOps, Jenkins</li>
+            <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation, ARM Templates</li>
+            <li><strong>Containers & Orchestration:</strong> Docker, Kubernetes, Helm</li>
+            <li><strong>Configuration Management:</strong> Ansible, Ansible Semaphore</li>
+            <li><strong>Monitoring & Logging:</strong> Grafana, Prometheus, Azure Monitor, EFK Stack</li>
+            <li><strong>Scripting:</strong> Bash, PowerShell, Python</li>
+          </ul>
+        </div>
+        <div class="social-icons mt-3">
+          <a href="https://github.com/Rambo4Fuggi" target="_blank" class="btn btn-dark">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/SreenivasuluBaddela/" target="_blank" class="btn btn-dark">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
