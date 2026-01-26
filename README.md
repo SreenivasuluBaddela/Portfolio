@@ -16,7 +16,7 @@
 ###
 
 <div align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=piyushsachdeva.piyushsachdeva&"  />
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=SreenivasuluBaddela.Portfolio&"  alt="visitor badge />
 </div>
 
 ###
