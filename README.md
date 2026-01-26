@@ -1,18 +1,11 @@
-## Hi there 👋
-
 ###
-<!--
+
 <div align="center">
-  <a href="https://www.linkedin.com/in/piyush-sachdeva/">
+  <a href="https://www.linkedin.com/in/sreenivasulubaddela/">
   <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
   </a>
-   <a href="https://www.youtube.com/@techtutorialswithpiyush">
-  <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="youtube logo"  />
-   </a>
-  <a href="https://www.x.com/@techie_piyush">
-  <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="twitter logo"  />
 </div>
--->
+
 ###
 
 <div align="center">
@@ -31,7 +24,8 @@
 
 ###
 
-<p align="left">I'm Sreenu Baddela, born in Dharmavaram[AndhraPradesh], India, and now living in Banglore<br><br>- 🔭 I’m working as a Cloud & DevOps Engineer at KROLL, Hyderabad<br>- 
+<p align="left">I'm Sreenivasulu Baddela, born in Dharmavaram[AndhraPradesh], India, and now living in Banglore<br><br>- 🔭 I’m working as a Cloud & DevOps Engineer at KROLL, Hyderabad<br>- 
+Skills : AWS | Azure | Terraform | Azure DevOps | Kubernetes | Docker | Ansible | CI/CD | Infrastructure Automation | Scripting (Bash, PowerShell)
   <!--
   📚 I'm currently teaching Kubernetes and everything related to Cloud/DevOps<br>- ⚡ In my free time, I help with The CloudOps Community, create YouTube video tutorials, and mentor Cloud and DevOps aspirants</p>
   -->
