@@ -1,125 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  <style>
-    :root {
-      --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      --card-bg: rgba(255, 255, 255, 0.05);
-      --text-color: #ffffffcc;
-      --accent-color: #a64aff;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      background: var(--bg-gradient);
-      height: 100vh;
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: var(--text-color);
-    }
+    <title>Sreenivasulu Baddela | Cloud & DevOps Engineer</title>
 
-    .avatar {
-      width: 130px;
-      height: 130px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 3px solid var(--accent-color);
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .card {
-      padding: 30px;
-      border-radius: 20px;
-      background: var(--card-bg);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #100d2b, #302858);
+            color: #e5e7eb;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
 
-    .card-title {
-      color: var(--accent-color);
-    }
-    
-    .card-text {
-        color: var(--text-color); /* Makes remaining text var(--text-color) */
-    }
+        .profile-card {
+            width: 100%;
+            max-width: 1320px;
+            background: rgba(255, 255, 255, 0.09);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 55px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+        }
 
-    .card-text strong {
-        color: var(--accent-color);
-    }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-    .divider {
-        width: 250px;
-        height: 3px;
-        background: var(--text-color);
-        margin: 10px auto;
-    }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #a855f7;
+            padding: 3px;
+            margin-bottom: 25px;
+        }
 
+        h1 {
+            color: #b34cff;
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
 
-    .card-text strong {
-      color: var(--accent-color);
-    }
+        .designation {
+            color: #c084fc;
+            font-size: 19px;
+            font-weight: bold;
+        }
 
-    .card-text li {
-      text-align: left;
-      margin-bottom: 5px;
-    }
+        .divider {
+            width: 290px;
+            max-width: 100%;
+            height: 4px;
+            background: #e5e7eb;
+            margin: 12px auto 0;
+        }
 
-    .social-icons a {
-      margin: 0 10px;
-      border: 1px solid var(--text-color);
-      color: var(--text-color);
-      background: transparent;
-      transition: all 0.3s ease-in-out;
-    }
+        .summary {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 22px;
+        }
 
-    .social-icons a:hover {
-      background: var(--accent-color);
-      color: #ffffff;
-      transform: scale(1.05);
-    }
+        .highlight {
+            color: #b34cff;
+            font-weight: bold;
+        }
 
-  </style>
+        .skills {
+            list-style: none;
+            margin-bottom: 28px;
+        }
+
+        .skills li {
+            font-size: 17px;
+            line-height: 2;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #e5e7eb;
+            text-decoration: none;
+            border: 1px solid #c4b5fd;
+            border-radius: 8px;
+            padding: 12px 20px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #a855f7;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .profile-card {
+                padding: 30px 22px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .summary,
+            .skills li {
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <div class="container d-flex justify-content-center align-items-center min-vh-100">
-    <div class="card text-center">
-      <div class="card-body">
-        <img src="images/portrait1.png" alt="Profile" class="avatar" />
-        <h3 class="card-title mb-0">Sreenivasulu Baddela</h3>
-        <h6 class="card-title mb-0">Cloud & DevOps Engineer</h6>
-        <div class="divider"></div>
-        <div class="card-text">
-          <p>
-            <strong>Highly skilled and experienced Cloud & DevOps Engineer</strong>
-            with a passion for building scalable, secure, and automated infrastructure solutions.
-          </p>
-          <ul class="list-unstyled">
-            <li><strong>Cloud:</strong> AWS, Azure</li>
-            <li><strong>CI/CD Tools:</strong> Azure DevOps, Jenkins</li>
-            <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation, ARM Templates</li>
-            <li><strong>Containers & Orchestration:</strong> Docker, Kubernetes, Helm</li>
-            <li><strong>Configuration Management:</strong> Ansible, Ansible Semaphore</li>
-            <li><strong>Monitoring & Logging:</strong> Grafana, Prometheus, Azure Monitor, EFK Stack</li>
-            <li><strong>Scripting:</strong> Bash, PowerShell, Python</li>
-          </ul>
-        </div>
-        <div class="social-icons mt-3">
-          <a href="https://github.com/Rambo4Fuggi" target="_blank" class="btn btn-dark">
-            <i class="bi bi-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/SreenivasuluBaddela/" target="_blank" class="btn btn-dark">
-            <i class="bi bi-linkedin"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+
+    <main class="profile-card">
+
+        <header class="profile-header">
+
+            <!-- Replace profile.jpg with your photo filename -->
+            <img
+                src="profile.jpg"
+                alt="Sreenivasulu Baddela"
+                class="profile-image"
+            >
+
+            <h1>Sreenivasulu Baddela</h1>
+
+            <p class="designation">
+                Cloud &amp; DevOps Engineer
+            </p>
+
+            <div class="divider"></div>
+
+        </header>
+
+        <section class="summary">
+            <strong class="highlight">
+                Cloud &amp; DevOps Engineer with 5+ years of experience
+            </strong>
+            in building scalable, secure, and automated cloud infrastructure
+            across AWS and Microsoft Azure.
+        </section>
+
+        <section>
+
+            <ul class="skills">
+
+                <li>
+                    <span class="highlight">Cloud:</span>
+                    AWS, Microsoft Azure
+                </li>
+
+                <li>
+                    <span class="highlight">CI/CD:</span>
+                    Azure DevOps, YAML Pipelines, Jenkins
+                </li>
+
+                <li>
+                    <span class="highlight">Infrastructure as Code:</span>
+                    Terraform, env0
+                </li>
+
+                <li>
+                    <span class="highlight">Containers:</span>
+                    Docker, Kubernetes, Helm
+                </li>
+
+                <li>
+                    <span class="highlight">Configuration Management:</span>
+                    Ansible, Ansible Semaphore
+                </li>
+
+                <li>
+                    <span class="highlight">Scripting:</span>
+                    Bash, PowerShell, Python
+                </li>
+
+                <li>
+                    <span class="highlight">Monitoring:</span>
+                    Azure Monitor, KQL, Application Insights,
+                    CloudWatch, Prometheus, Grafana
+                </li>
+
+                <li>
+                    <span class="highlight">Cloud Governance:</span>
+                    Stacklet, Cloud Custodian
+                </li>
+
+                <li>
+                    <span class="highlight">Administration:</span>
+                    Linux, Windows, Patching, Troubleshooting
+                </li>
+
+                <li>
+                    <span class="highlight">Cloud Optimization:</span>
+                    VM Right-Sizing, Automated Server Scheduling
+                </li>
+
+            </ul>
+
+        </section>
+
+        <footer class="social-links">
+
+            <a
+                href="https://github.com/SreenivasuluBaddela"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/sreenu504b/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+
+            <a href="mailto:b.sreenivas5004@gmail.com">
+                Email
+            </a>
+
+        </footer>
+
+    </main>
+
 </body>
 </html>
