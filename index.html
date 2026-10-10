@@ -1,254 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17132f">
+  <meta name="description" content="Sreenivasulu Baddela — Cloud & DevOps Engineer specializing in AWS, Azure, Terraform, env0, Azure DevOps, Kubernetes, automation, and cloud operations.">
+  <title>Sreenivasulu Baddela | Cloud &amp; DevOps Engineer</title>
 
-    <title>Sreenivasulu Baddela | Cloud & DevOps Engineer</title>
+  <style>
+    :root {
+      --bg: #100d24;
+      --panel: rgba(48, 43, 83, .94);
+      --panel-border: rgba(216, 203, 255, .15);
+      --text: #f4f1ff;
+      --muted: #c9c4dd;
+      --accent: #bd55ff;
+      --accent-2: #8b5cf6;
+      --line: rgba(226, 218, 255, .22);
+    }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 42px 20px;
+      display: grid;
+      place-items: center;
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(ellipse at 82% 12%, rgba(111, 65, 187, .24), transparent 34%),
+        radial-gradient(ellipse at 8% 90%, rgba(78, 49, 140, .18), transparent 38%),
+        linear-gradient(135deg, #100d24 0%, #201a45 55%, #17132f 100%);
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #100d2b, #302858);
-            color: #e5e7eb;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-        }
+    .portfolio {
+      width: min(100%, 1320px);
+      padding: clamp(26px, 5vw, 58px);
+      border: 1px solid var(--panel-border);
+      border-radius: 26px;
+      background: var(--panel);
+      box-shadow: 0 28px 80px rgba(0, 0, 0, .28);
+      backdrop-filter: blur(12px);
+    }
 
-        .profile-card {
-            width: 100%;
-            max-width: 1320px;
-            background: rgba(255, 255, 255, 0.09);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 24px;
-            padding: 55px;
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
-        }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .8rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
 
-        .profile-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+    .status { display: inline-flex; align-items: center; gap: 9px; }
+    .status-dot {
+      width: 9px; height: 9px; border-radius: 50%;
+      background: #4ade80; box-shadow: 0 0 12px rgba(74, 222, 128, .65);
+    }
 
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #a855f7;
-            padding: 3px;
-            margin-bottom: 25px;
-        }
+    .hero { text-align: center; }
+    .avatar {
+      width: 142px; height: 142px; border-radius: 50%;
+      display: block; margin: 0 auto 22px;
+      object-fit: cover; object-position: center;
+      border: 3px solid var(--accent);
+      padding: 4px;
+      background: #292044;
+      box-shadow: 0 0 0 7px rgba(189, 85, 255, .08);
+    }
 
-        h1 {
-            color: #b34cff;
-            font-size: 32px;
-            margin-bottom: 5px;
-        }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #d9a6ff;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
 
-        .designation {
-            color: #c084fc;
-            font-size: 19px;
-            font-weight: bold;
-        }
+    h1 {
+      margin: 0;
+      color: var(--accent);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: -.04em;
+    }
 
-        .divider {
-            width: 290px;
-            max-width: 100%;
-            height: 4px;
-            background: #e5e7eb;
-            margin: 12px auto 0;
-        }
+    .role {
+      margin: 10px 0 0;
+      color: #dfb4ff;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-weight: 650;
+    }
 
-        .summary {
-            font-size: 17px;
-            line-height: 1.8;
-            margin-bottom: 22px;
-        }
+    .hero-rule {
+      width: 220px; max-width: 70%;
+      height: 4px; margin: 20px auto 22px;
+      background: linear-gradient(90deg, transparent, #eee7ff, transparent);
+      border-radius: 10px;
+    }
 
-        .highlight {
-            color: #b34cff;
-            font-weight: bold;
-        }
+    .intro {
+      max-width: 930px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.06rem;
+      line-height: 1.85;
+    }
+    .intro strong { color: #e5a8ff; }
 
-        .skills {
-            list-style: none;
-            margin-bottom: 28px;
-        }
+    .actions {
+      display: flex; justify-content: center; flex-wrap: wrap;
+      gap: 12px; margin: 25px 0 0;
+    }
 
-        .skills li {
-            font-size: 17px;
-            line-height: 2;
-        }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 44px; padding: 0 18px; border-radius: 10px;
+      border: 1px solid rgba(211, 190, 255, .35);
+      color: var(--text); text-decoration: none; font-size: .93rem;
+      font-weight: 650; transition: transform .2s, background .2s, border-color .2s;
+    }
+    .button.primary {
+      color: #180c28; background: linear-gradient(135deg, #d8a1ff, #b85aff);
+      border-color: transparent;
+    }
+    .button:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .button:not(.primary):hover { background: rgba(189, 85, 255, .12); }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            margin-top: 20px;
-        }
+    .section { margin-top: 42px; }
+    .section-heading {
+      display: flex; align-items: center; gap: 12px;
+      margin: 0 0 20px; font-size: 1.35rem; letter-spacing: -.02em;
+    }
+    .section-heading::after {
+      content: ""; height: 1px; flex: 1; background: var(--line);
+    }
+    .section-heading span { color: #e1b0ff; }
 
-        .social-links a {
-            color: #e5e7eb;
-            text-decoration: none;
-            border: 1px solid #c4b5fd;
-            border-radius: 8px;
-            padding: 12px 20px;
-            transition: 0.3s;
-        }
+    .about-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;
+    }
+    .info-card, .skill-card, .project-card {
+      border: 1px solid var(--panel-border);
+      border-radius: 15px;
+      background: rgba(15, 12, 35, .25);
+    }
+    .info-card { padding: 19px; }
+    .info-card h3 { margin: 0 0 8px; color: #e0a9ff; font-size: 1rem; }
+    .info-card p { margin: 0; color: var(--muted); line-height: 1.65; font-size: .94rem; }
 
-        .social-links a:hover {
-            background: #a855f7;
-            color: white;
-            transform: translateY(-3px);
-        }
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px;
+    }
+    .skill-card { padding: 20px; }
+    .skill-card h3 {
+      display: flex; align-items: center; gap: 10px;
+      margin: 0 0 10px; font-size: 1rem; color: #e2b2ff;
+    }
+    .skill-card p { margin: 0; color: var(--muted); line-height: 1.8; font-size: .94rem; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .tag {
+      padding: 6px 10px; border: 1px solid rgba(189, 85, 255, .22);
+      border-radius: 7px; color: #e9d5ff; background: rgba(139, 92, 246, .11);
+      font-size: .82rem;
+    }
 
-        @media (max-width: 768px) {
-            .profile-card {
-                padding: 30px 22px;
-            }
+    .experience {
+      position: relative; padding: 0 0 0 23px;
+      border-left: 2px solid rgba(189, 85, 255, .42);
+    }
+    .job { position: relative; margin: 0 0 25px; }
+    .job:last-child { margin-bottom: 0; }
+    .job::before {
+      content: ""; position: absolute; left: -30px; top: 6px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 0 5px rgba(189, 85, 255, .12);
+    }
+    .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+    .job h3 { margin: 0; font-size: 1.08rem; }
+    .job-date { color: #d5a2ff; font-size: .9rem; }
+    .job-company { margin: 5px 0 10px; color: var(--muted); }
+    .job ul { margin: 0; padding-left: 19px; color: var(--muted); line-height: 1.8; }
+    .job li { margin: 4px 0; }
+    .job li::marker { color: var(--accent); }
 
-            .profile-image {
-                width: 120px;
-                height: 120px;
-            }
+    .projects-note {
+      color: var(--muted); line-height: 1.7; margin: -5px 0 16px;
+    }
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;
+    }
+    .project-card { padding: 19px; }
+    .project-card .icon { font-size: 1.5rem; }
+    .project-card h3 { margin: 12px 0 8px; font-size: 1rem; }
+    .project-card p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.65; }
 
-            h1 {
-                font-size: 26px;
-            }
+    .education {
+      padding: 19px 20px; border: 1px solid var(--panel-border);
+      border-radius: 14px; color: var(--muted); line-height: 1.7;
+      background: rgba(15, 12, 35, .25);
+    }
+    .education strong { color: var(--text); }
 
-            .summary,
-            .skills li {
-                font-size: 15px;
-            }
-        }
-    </style>
+    .footer {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+      margin-top: 42px; padding-top: 20px; border-top: 1px solid var(--line);
+      color: #a9a2c4; font-size: .85rem;
+    }
+    .footer a { color: #dfb4ff; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 850px) {
+      .about-grid, .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .portfolio { padding: 30px; }
+    }
+    @media (max-width: 600px) {
+      body { padding: 18px 10px; }
+      .portfolio { padding: 24px 18px; border-radius: 18px; }
+      .topline { font-size: .68rem; }
+      .avatar { width: 118px; height: 118px; }
+      .about-grid, .skills-grid, .projects-grid { grid-template-columns: 1fr; }
+      .section { margin-top: 32px; }
+      .job-head { display: block; }
+      .job-date { display: block; margin-top: 5px; }
+      .footer { display: block; line-height: 1.9; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
 </head>
 
 <body>
+  <main class="portfolio">
+    <div class="topline">
+      <span>Cloud Engineering Portfolio</span>
+      <span class="status"><span class="status-dot"></span> AWS · Azure · Automation</span>
+    </div>
 
-    <main class="profile-card">
+    <header class="hero">
+      <!-- Put your photo in this repository as profile.jpg, or change this path. -->
+      <img class="avatar" src="profile.jpg" alt="Sreenivasulu Baddela"
+           onerror="this.style.display='none'">
 
-        <header class="profile-header">
+      <p class="eyebrow">Infrastructure · Automation · Reliability</p>
+      <h1>Sreenivasulu Baddela</h1>
+      <p class="role">Cloud &amp; DevOps Engineer</p>
+      <div class="hero-rule"></div>
 
-            <!-- Replace profile.jpg with your photo filename -->
-            <img
-                src="profile.jpg"
-                alt="Sreenivasulu Baddela"
-                class="profile-image"
-            >
+      <p class="intro">
+        <strong>Cloud &amp; DevOps Engineer with 5+ years of experience</strong>
+        designing, provisioning, automating, and supporting cloud infrastructure
+        across <strong>AWS and Microsoft Azure</strong>. Focused on reusable
+        Terraform modules, env0 workflows, Azure DevOps pipelines, Kubernetes
+        operations, observability, and reliable, cost-conscious infrastructure.
+      </p>
 
-            <h1>Sreenivasulu Baddela</h1>
+      <div class="actions">
+        <a class="button primary" href="https://www.linkedin.com/in/sreenu504b/"
+           target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+        <a class="button" href="https://github.com/SreenivasuluBaddela"
+           target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
+        <a class="button" href="mailto:b.sreenivas5004@gmail.com">Email Me</a>
+      </div>
+    </header>
 
-            <p class="designation">
-                Cloud &amp; DevOps Engineer
-            </p>
+    <section class="section" id="about">
+      <h2 class="section-heading"><span>01</span> About Me</h2>
+      <div class="about-grid">
+        <article class="info-card">
+          <h3>☁️ Multi-Cloud Engineering</h3>
+          <p>Provisioning and supporting AWS and Azure services, networking, compute, storage, databases, and cloud-native workloads.</p>
+        </article>
+        <article class="info-card">
+          <h3>🏗️ Infrastructure as Code</h3>
+          <p>Reusable Terraform modules, Terraform backend migration to env0, env0 templates, and automated infrastructure deployments.</p>
+        </article>
+        <article class="info-card">
+          <h3>⚙️ Operations &amp; Reliability</h3>
+          <p>Linux and Windows administration, patching, Kubernetes support, monitoring, disaster recovery testing, and troubleshooting.</p>
+        </article>
+      </div>
+    </section>
 
-            <div class="divider"></div>
+    <section class="section" id="skills">
+      <h2 class="section-heading"><span>02</span> Technical Skills</h2>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>☁️ Cloud Platforms</h3>
+          <p>AWS and Microsoft Azure; Hyper-V</p>
+          <div class="tag-list">
+            <span class="tag">EC2</span><span class="tag">ECS / EKS</span>
+            <span class="tag">Lambda</span><span class="tag">S3</span>
+            <span class="tag">IAM / VPC</span><span class="tag">RDS</span>
+            <span class="tag">AKS / ACR</span><span class="tag">Azure VMs</span>
+            <span class="tag">Function Apps</span><span class="tag">App Services</span>
+            <span class="tag">Key Vault</span><span class="tag">Azure SQL / PostgreSQL</span>
+          </div>
+        </article>
 
-        </header>
+        <article class="skill-card">
+          <h3>🏗️ IaC &amp; Cloud Governance</h3>
+          <p>Infrastructure provisioning, reusable modules, backend migration, templates, and governance.</p>
+          <div class="tag-list">
+            <span class="tag">Terraform</span><span class="tag">env0</span>
+            <span class="tag">Stacklet</span><span class="tag">Cloud Custodian</span>
+          </div>
+        </article>
 
-        <section class="summary">
-            <strong class="highlight">
-                Cloud &amp; DevOps Engineer with 5+ years of experience
-            </strong>
-            in building scalable, secure, and automated cloud infrastructure
-            across AWS and Microsoft Azure.
-        </section>
+        <article class="skill-card">
+          <h3>🔄 CI/CD &amp; Containers</h3>
+          <p>Pipeline development, infrastructure deployment automation, reusable templates, and Kubernetes operations.</p>
+          <div class="tag-list">
+            <span class="tag">Azure DevOps</span><span class="tag">YAML</span>
+            <span class="tag">Jenkins</span><span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span><span class="tag">Helm</span>
+          </div>
+        </article>
 
-        <section>
+        <article class="skill-card">
+          <h3>⚙️ Configuration &amp; Scripting</h3>
+          <p>Configuration management and cross-platform operational automation.</p>
+          <div class="tag-list">
+            <span class="tag">Ansible</span><span class="tag">Ansible Semaphore</span>
+            <span class="tag">Bash</span><span class="tag">PowerShell</span>
+            <span class="tag">Python</span><span class="tag">Linux</span><span class="tag">Windows</span>
+          </div>
+        </article>
 
-            <ul class="skills">
+        <article class="skill-card">
+          <h3>📊 Monitoring &amp; Observability</h3>
+          <p>Infrastructure metrics, KQL queries, alerting, dashboards, and application monitoring.</p>
+          <div class="tag-list">
+            <span class="tag">Azure Monitor</span><span class="tag">KQL</span>
+            <span class="tag">Application Insights</span><span class="tag">CloudWatch</span>
+            <span class="tag">Prometheus</span><span class="tag">Grafana</span>
+          </div>
+        </article>
 
-                <li>
-                    <span class="highlight">Cloud:</span>
-                    AWS, Microsoft Azure
-                </li>
+        <article class="skill-card">
+          <h3>🛡️ Cloud Operations</h3>
+          <p>Server maintenance, workload support, resilience testing, and cost-conscious infrastructure management.</p>
+          <div class="tag-list">
+            <span class="tag">OS Patching</span><span class="tag">DR Testing</span>
+            <span class="tag">VM Right-Sizing</span><span class="tag">Scheduled Shutdowns</span>
+            <span class="tag">Golden AMIs</span><span class="tag">Troubleshooting</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-                <li>
-                    <span class="highlight">CI/CD:</span>
-                    Azure DevOps, YAML Pipelines, Jenkins
-                </li>
+    <section class="section" id="experience">
+      <h2 class="section-heading"><span>03</span> Professional Experience</h2>
+      <div class="experience">
+        <article class="job">
+          <div class="job-head">
+            <h3>Infrastructure Engineer – Cloud &amp; DevOps</h3>
+            <span class="job-date">Aug 2023 – Present</span>
+          </div>
+          <p class="job-company">Kroll Digital Solutions · Hyderabad, India</p>
+          <ul>
+            <li>Design and maintain Azure DevOps YAML pipelines and reusable templates for application deployments to AKS, ECS, Lambda, Azure Function Apps, App Services, EC2, and Azure VMs.</li>
+            <li>Build reusable Terraform modules for AWS and Azure resources and automate infrastructure deployments through Azure DevOps.</li>
+            <li>Support Terraform backend migration from Terraform Enterprise to env0, refactor repositories, develop env0 templates, and minimize infrastructure drift.</li>
+            <li>Configure AKS monitoring and alerts using Azure Monitor, platform metrics, and KQL; support infrastructure monitoring with Application Insights and CloudWatch.</li>
+            <li>Manage Ansible automation, Bash and PowerShell scripts, Linux and Windows patching, Kubernetes upgrades, and Helm-based workload support.</li>
+            <li>Support cloud governance through Stacklet and Cloud Custodian, disaster recovery testing, self-hosted Azure DevOps agents, and EC2 scheduling across AWS accounts.</li>
+            <li>Optimize AWS and Azure costs through EC2 and VM right-sizing, resource utilization reviews, and automated shutdowns during non-business hours.</li>
+          </ul>
+        </article>
 
-                <li>
-                    <span class="highlight">Infrastructure as Code:</span>
-                    Terraform, env0
-                </li>
+        <article class="job">
+          <div class="job-head">
+            <h3>Software Engineer – Cloud</h3>
+            <span class="job-date">Sep 2021 – Aug 2023</span>
+          </div>
+          <p class="job-company">Fastscript · Hyderabad, India</p>
+          <ul>
+            <li>Provisioned and supported AWS infrastructure with Terraform, including EC2, ECS Fargate, EKS, Lambda, S3, IAM, VPC, load balancers, and Secrets Manager.</li>
+            <li>Developed reusable Terraform modules and automated Terraform deployments using Jenkins pipelines.</li>
+            <li>Supported Golden AMI creation, Linux and Windows administration, user and permission management, patching, and infrastructure troubleshooting.</li>
+            <li>Supported Kubernetes workloads and monitored cluster and system health using Prometheus and Grafana.</li>
+            <li>Developed Bash and PowerShell post-build scripts to automate operational tasks and improve consistency.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-                <li>
-                    <span class="highlight">Containers:</span>
-                    Docker, Kubernetes, Helm
-                </li>
+    <section class="section" id="projects">
+      <h2 class="section-heading"><span>04</span> Project Highlights</h2>
+      <p class="projects-note">
+        These are areas of practical experience. Add links to public repositories when you have sanitized, shareable examples; do not publish employer code or configuration secrets.
+      </p>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="icon">🏗️</div>
+          <h3>Terraform &amp; env0 Automation</h3>
+          <p>Reusable multi-cloud modules, backend migration, env0 templates, and automated infrastructure provisioning.</p>
+        </article>
+        <article class="project-card">
+          <div class="icon">🔄</div>
+          <h3>Azure DevOps Pipelines</h3>
+          <p>Reusable YAML templates and deployment pipelines for cloud infrastructure and application workloads.</p>
+        </article>
+        <article class="project-card">
+          <div class="icon">☸️</div>
+          <h3>AKS Monitoring &amp; Operations</h3>
+          <p>KQL-based alerts, cluster and node pool monitoring, Kubernetes upgrades, and Helm workload support.</p>
+        </article>
+        <article class="project-card">
+          <div class="icon">⚙️</div>
+          <h3>Ansible &amp; Scripting</h3>
+          <p>Configuration management and Bash/PowerShell automation for repeatable operational tasks.</p>
+        </article>
+        <article class="project-card">
+          <div class="icon">📈</div>
+          <h3>Cloud Cost Optimization</h3>
+          <p>EC2 and VM right-sizing, utilization review, and automated shutdowns outside business hours.</p>
+        </article>
+        <article class="project-card">
+          <div class="icon">🛡️</div>
+          <h3>Cloud Resilience &amp; Governance</h3>
+          <p>Disaster recovery testing, cloud governance policies, patching, and operational reliability.</p>
+        </article>
+      </div>
+    </section>
 
-                <li>
-                    <span class="highlight">Configuration Management:</span>
-                    Ansible, Ansible Semaphore
-                </li>
+    <section class="section" id="education">
+      <h2 class="section-heading"><span>05</span> Education</h2>
+      <div class="education">
+        <strong>B.Tech in Mechanical Engineering</strong><br>
+        Sri Venkateswara University, Tirupati
+      </div>
+    </section>
 
-                <li>
-                    <span class="highlight">Scripting:</span>
-                    Bash, PowerShell, Python
-                </li>
+    <footer class="footer">
+      <span>© <span id="year"></span> Sreenivasulu Baddela</span>
+      <span>
+        <a href="https://github.com/SreenivasuluBaddela" target="_blank" rel="noopener noreferrer">GitHub</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.linkedin.com/in/sreenu504b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:b.sreenivas5004@gmail.com">Email</a>
+      </span>
+    </footer>
+  </main>
 
-                <li>
-                    <span class="highlight">Monitoring:</span>
-                    Azure Monitor, KQL, Application Insights,
-                    CloudWatch, Prometheus, Grafana
-                </li>
-
-                <li>
-                    <span class="highlight">Cloud Governance:</span>
-                    Stacklet, Cloud Custodian
-                </li>
-
-                <li>
-                    <span class="highlight">Administration:</span>
-                    Linux, Windows, Patching, Troubleshooting
-                </li>
-
-                <li>
-                    <span class="highlight">Cloud Optimization:</span>
-                    VM Right-Sizing, Automated Server Scheduling
-                </li>
-
-            </ul>
-
-        </section>
-
-        <footer class="social-links">
-
-            <a
-                href="https://github.com/SreenivasuluBaddela"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GitHub
-            </a>
-
-            <a
-                href="https://www.linkedin.com/in/sreenu504b/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                LinkedIn
-            </a>
-
-            <a href="mailto:b.sreenivas5004@gmail.com">
-                Email
-            </a>
-
-        </footer>
-
-    </main>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
